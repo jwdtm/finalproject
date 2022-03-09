@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.finalproject">
+
+    <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/book"
+        android:label="library book"
+        android:roundIcon="@drawable/book"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.Finalproject">
+        <activity
+            android:name=".EditBookActivity"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name=".BookDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:parentActivityName=".CategoriesActivity"
+            android:name=".CategoryBooksActivity"
+            android:exported="false" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name=".CategoriesActivity"
+            android:exported="false" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name=".AddNewBookActivity"
+            android:exported="false" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name=".AddCategory"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivBookImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/book"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnChooseImageFromGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBookImage"
+        app:layout_constraintEnd_toEndOf="@+id/ivBookImage"
+        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBookImage" />
+
+    <EditText
+        android:id="@+id/etBookName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawableStart="@drawable/ic_baseline_menu_book_24"
+        android:drawablePadding="8dp"
+        android:hint="Book Name"
+
+        android:inputType="textPersonName"
+        android:paddingHorizontal="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spBookCategory" />
+
+    <EditText
+        android:id="@+id/etBookAuthorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/ic_baseline_perm_identity_24"
+        android:drawablePadding="8dp"
+        android:hint="Author Name"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/etBookName"
+        app:layout_constraintStart_toStartOf="@+id/etBookName"
+        app:layout_constraintTop_toBottomOf="@+id/etBookName" />
+
+    <EditText
+        android:id="@+id/etBookReleaseYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/ic_baseline_date_range_24"
+        android:drawablePadding="8dp"
+        android:hint="Release Year"
+
+        android:inputType="numberSigned"
+        android:paddingHorizontal="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/etBookAuthorName"
+        app:layout_constraintStart_toStartOf="@+id/etBookAuthorName"
+        app:layout_constraintTop_toBottomOf="@+id/etBookAuthorName" />
+
+    <EditText
+        android:id="@+id/etBookNumberOfPages"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/ic_baseline_123_24"
+        android:drawablePadding="8dp"
+        android:hint="Pages Number"
+
+        android:inputType="numberSigned"
+        android:paddingHorizontal="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/etBookReleaseYear"
+        app:layout_constraintStart_toStartOf="@+id/etBookReleaseYear"
+        app:layout_constraintTop_toBottomOf="@+id/etBookReleaseYear" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Create"
+        app:layout_constraintEnd_toEndOf="@+id/etBookNumberOfPages"
+        app:layout_constraintStart_toStartOf="@+id/etBookNumberOfPages"
+        app:layout_constraintTop_toBottomOf="@+id/etBookNumberOfPages" />
+
+    <Spinner
+        android:id="@+id/spBookCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:minHeight="48dp"
+        android:paddingVertical="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:drawablePadding="8dp"
+        android:text="Add New Category"
+        android:textSize="20sp"
+        app:drawableStartCompat="@drawable/ic_baseline_category_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+</androidx.constraintlayout.widget.ConstraintLayout>

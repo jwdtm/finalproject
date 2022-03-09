@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">finalproject</string>
+    <string name="Create_Category">Create Category</string>
+    <string name="library">Library</string>
+    <string name="favorites">Favorites</string>
+    <string name="create_book">Create Book</string>
+</resources>
